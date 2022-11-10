@@ -24,11 +24,12 @@ public class Route {
 		
 		GeometryFactory fac = new GeometryFactory();
 
+		//Start - Koordinaten für Chios
 		if (i == 0) {
 			Coordinate coord = new Coordinate(26, 38);
 			return coord;
 		}
-		// Koordinaten fï¿½r Sithonia (Chalkidiki)
+		// Koordinaten für Sithonia (Chalkidiki)
 		if (i == 1) {
 			Coordinate coord = new Coordinate(23, 40);
 			return coord;
