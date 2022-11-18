@@ -46,20 +46,44 @@
   <layoutInterval>0</layoutInterval>
   <layerOrder>
     <entry>
-      <string>Network</string>
-      <int>7</int>
+      <string>Place Names</string>
+      <int>5</int>
     </entry>
     <entry>
-      <string>escaperoute.agents.Human</string>
+      <string>Blue Marble May 2004</string>
+      <int>3</int>
+    </entry>
+    <entry>
+      <string>infection network</string>
+      <int>6</int>
+    </entry>
+    <entry>
+      <string>Scale bar</string>
+      <int>2</int>
+    </entry>
+    <entry>
+      <string>World Map</string>
+      <int>1</int>
+    </entry>
+    <entry>
+      <string>geozombies.agents.Human</string>
       <int>9</int>
     </entry>
     <entry>
-      <string>escaperoute.agents.Waypoint</string>
+      <string>geozombies.agents.Zombie</string>
       <int>8</int>
     </entry>
     <entry>
-      <string>My indexed coverage</string>
-      <int>6</int>
+      <string>geozombies.agents.ZoneAgent</string>
+      <int>7</int>
+    </entry>
+    <entry>
+      <string>i-cubed Landsat</string>
+      <int>4</int>
+    </entry>
+    <entry>
+      <string>Compass</string>
+      <int>0</int>
     </entry>
   </layerOrder>
   <projections>
@@ -101,6 +125,30 @@
   <viewType>FLAT</viewType>
   <trackAgents>false</trackAgents>
   <globeLayers>
+    <entry>
+      <string>Place Names</string>
+      <boolean>true</boolean>
+    </entry>
+    <entry>
+      <string>Blue Marble May 2004</string>
+      <boolean>true</boolean>
+    </entry>
+    <entry>
+      <string>Scale bar</string>
+      <boolean>true</boolean>
+    </entry>
+    <entry>
+      <string>World Map</string>
+      <boolean>true</boolean>
+    </entry>
+    <entry>
+      <string>i-cubed Landsat</string>
+      <boolean>true</boolean>
+    </entry>
+    <entry>
+      <string>Compass</string>
+      <boolean>true</boolean>
+    </entry>
   </globeLayers>
   <staticCoverages/>
   <coverageLayers>

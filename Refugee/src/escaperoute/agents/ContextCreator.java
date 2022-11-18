@@ -59,11 +59,11 @@ public class ContextCreator implements ContextBuilder {
 		Human agent = new Human("Refugee");
 		context.add(agent);
 
-		Point geom = fac.createPoint(new Coordinate(-88.8570, 41.7432));
+		Point geom = fac.createPoint(new Coordinate(16, 44));
 		geography.move(agent, geom);
 
 		// envelope around northing Illinois
-		ReferencedEnvelope env = new ReferencedEnvelope(-89.4, -87.7236, 41.50, 42.1681, DefaultGeographicCRS.WGS84);
+		ReferencedEnvelope env = new ReferencedEnvelope(4, 28, 55, 33, DefaultGeographicCRS.WGS84);
 
 		// Create a coverage to act as a heat map that becomes more intense with
 		//  the number of times the agent has visited a point.
