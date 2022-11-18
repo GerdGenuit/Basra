@@ -1,6 +1,0 @@
-#
-#Thu Oct 06 14:18:10 CEST 2022
-incoming=tcp\://127.0.0.1\:5555
-outgoing=tcp\://127.0.0.1\:5556
-scenario=..\\Refugee.rs
-working.directory=../
