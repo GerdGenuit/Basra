@@ -163,14 +163,66 @@ public class Human extends Route{
 		Context context = ContextUtils.getContext(this);
 		Geography<Human> geography = (Geography)context.getProjection("Geography");
 				
-
+		if (route == "BalkanRoute" && locationCount == 1) {
+			Random random = new Random();
+			int WhichRoute = random.nextInt(3);
+			
+			if (WhichRoute == 0) {
+				//ab Athen kann es weiter auf der Balkanroute gehen
+				route = "BalkanRoute";
+			} if (WhichRoute == 1) {
+				//oder auf der Südroute
+				route = "SouthRoute";
+			} else if (WhichRoute == 2) {
+				//oder auf der Alternativroute
+				route = "AlternativeRoute";
+			}
+		}
+		
+		if (route == "NorthRoute1" && locationCount == 2) {
+			Random random = new Random();
+			int WhichRoute = random.nextInt(2);
+			
+			if (WhichRoute == 0) {
+				//ab Sofia kann es weiter auf der Nordroute gehen
+				route = "NorthRoute1";
+			} if (WhichRoute == 1) {
+				//oder auf der zweiten Hälfte der Nordroute
+				route = "NorthRoute2";
+				locationCount = 0;
+			}
+		}
+		
 		//die möglichen Startrouten sind entweder die Balkanroute oder die Nordroute
 		if (route == "BalkanRoute") {
 			location = BalkanRoute(locationCount);
 		}
+		
 		if (route == "NorthRoute1") {
 			location = NorthRoute1(locationCount);
+			if (locationCount == 4) {
+				locationCount = 7;
+				route = "BalkanRoute";
+			}
 		}
+		
+		//Alternativrouten
+		if (route == "SouthRoute") {
+			location = SouthRoute(locationCount);
+		}
+		
+		if (route == "AlternativeRoute") {
+			location = AlternativeRoute(locationCount);
+			if (locationCount == 5) {
+				locationCount = 7;
+				route = "BalkanRoute";
+			}
+		}
+		
+		if (route == "NorthRoute2") {
+			location = NorthRoute2(locationCount);
+		}
+		
 		locationCount++;
 		geography.move(this, location);
 	}
