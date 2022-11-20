@@ -18,6 +18,8 @@ import repast.simphony.visualization.gis3D.style.NetworkStyleGIS;
  *
  */
 public class MyNetworkStyle implements NetworkStyleGIS {
+	
+	public static Color color= Color.GREEN;
 
 	@Override
 	public SurfacePolyline getSurfaceShape(RepastEdge edge, SurfacePolyline shape) {
@@ -26,7 +28,7 @@ public class MyNetworkStyle implements NetworkStyleGIS {
 
 	@Override
 	public Color getLineColor(RepastEdge edge) {
-		return Color.GREEN;
+		return color;
 	}
 
 	@Override

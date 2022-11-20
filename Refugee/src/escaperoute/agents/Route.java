@@ -1,6 +1,9 @@
 package escaperoute.agents;
 
 import java.util.Random;
+import java.awt.Color;
+
+import escaperoute.styles.MyNetworkStyle;
 
 import org.geotools.geometry.DirectPosition2D;
 import org.opengis.geometry.DirectPosition;
@@ -55,6 +58,9 @@ public class Route {
 	}
 	
 	public Point BalkanRoute(int i) {
+		
+		//helles rot
+		MyNetworkStyle.color = new Color(255,102,102);
 		
 		//Athen
 		if (i == 0) {
@@ -150,6 +156,10 @@ public class Route {
 	}
 	
 	public Point SouthRoute(int i) {
+		
+		//helles blau
+		MyNetworkStyle.color = new Color(51,204,255);
+		
 		//Startpunkt Athen
 		if (i == 0) {
 			Point geom = fac.createPoint(new Coordinate(23.44, 37.59));
@@ -244,6 +254,10 @@ public class Route {
 	}
 	
 	public Point NorthRoute1(int i) {
+		
+		//helles orange
+		MyNetworkStyle.color = new Color(255,153,0);
+		
 		//Startpunkt Istanbul
 		if (i == 0) {
 			Point geom = fac.createPoint(new Coordinate(28.58, 41.10));
@@ -273,6 +287,10 @@ public class Route {
 	}
 	
 	public Point NorthRoute2(int i) {
+		
+		//helles grün
+		MyNetworkStyle.color = new Color(0,204,0);
+		
 		//Startpunkt Sofia
 		if (i == 0) {
 			Point geom = fac.createPoint(new Coordinate(23.19, 42.42));
@@ -342,6 +360,10 @@ public class Route {
 	}
 	
 	public Point AlternativeRoute(int i) {
+		
+		//helles gelb
+		MyNetworkStyle.color = new Color(255,255,153);
+		
 		//Startpunkt Athen
 		if (i == 0) {
 			Point geom = fac.createPoint(new Coordinate(23.44, 37.59));
