@@ -1,10 +1,13 @@
 package escaperoute.agents;
 
+import java.util.Random;
+
 import org.geotools.geometry.DirectPosition2D;
 import org.opengis.geometry.DirectPosition;
 
 import com.vividsolutions.jts.geom.Coordinate;
 import com.vividsolutions.jts.geom.GeometryFactory;
+import com.vividsolutions.jts.geom.Point;
 
 import repast.simphony.context.Context;
 import repast.simphony.engine.schedule.ScheduleParameters;
@@ -18,29 +21,69 @@ import repast.simphony.util.ContextUtils;
 /**
  * A geolocated agent with a point location.
  * 
- * @author Eric Tatara
+ * @author XX
  *
  */
-public class Human {
+public class Human extends Route{
 
 	private String name;
 	private int waypointCount = 1;
 	private Waypoint lastWayPoint = null;
+	private Point location = null;
+	private int locationCount = 0;
+	private String route;
+	private Boolean Chalkidiki = false;
 
-	public Human(String name) {
-		this.name = name;  
+	public Human(String name, Point geom) {
+		this.name = name;
+		this.location = geom;
+		this.route = null;
 	}
 
-	@ScheduledMethod(start = 1, interval = 1, priority = ScheduleParameters.FIRST_PRIORITY)
-	public void step() {  	
-		randomWalk();
+	@ScheduledMethod(start = 0, priority = ScheduleParameters.FIRST_PRIORITY)
+	public void init() {
+		Context context = ContextUtils.getContext(this);
+		Geography<Human> geography = (Geography)context.getProjection("Geography");
+
+		location = Start();
+		geography.move(this, location);
 		trackInCoverage();
 		dropWaypoint();
 		
-		// This is a synthetic way to slow down the agent step() method.  Since the 
-		//   agent doesnt perform any complex activity, it would otherwise step the 
-		//   model too fast to observe the behavior.  The try block with Thread.sleep()
-		//   should not be used in an actual simulation model.
+		int i = Route.StartNumber;
+		
+		if (i == 1) {
+			Random random = new Random();
+			int WhichRoute = random.nextInt(1);
+		
+			if (WhichRoute == 0) {
+				//über Chalkidiki
+				route = "BalkanRoute";
+				Chalkidiki = true;
+			} else if (WhichRoute == 1) {
+				//über Athen
+				route = "BalkanRoute";
+			}
+		}
+		if (i == 2 || i == 3) {
+			route = "BalkanRoute";
+		}
+		if (i == 4) {
+			route = "NorthRoute1";
+		}
+	}
+	
+	@ScheduledMethod(start = 1, interval = 1, priority = ScheduleParameters.FIRST_PRIORITY)
+	public void step() {  
+		if (Chalkidiki == true) {
+			Chalkidiki();
+			Chalkidiki = false;
+		}
+		Walk();
+		trackInCoverage();
+		dropWaypoint();
+		
+		// XX
 		try {
 			Thread.sleep(50);
 		} catch (InterruptedException e) {
@@ -101,15 +144,35 @@ public class Human {
 		coverage.setValue(pos, val);
 	}
 
-	/**
-	 * Random walk the agent around.
-	 */
-	private void randomWalk(){
+	private void Chalkidiki() {
 		Context context = ContextUtils.getContext(this);
 		Geography<Human> geography = (Geography)context.getProjection("Geography");
+				
+		Point geom = fac.createPoint(new Coordinate(23.42, 40.13));
+		location = geom;
+		locationCount = 3;
+		geography.move(this, location);
+		trackInCoverage();
+		dropWaypoint();
+	}
+	
+	/**
+	 * Die Routen werden gewählt und durchgelaufen.
+	 */
+	private void Walk(){
+		Context context = ContextUtils.getContext(this);
+		Geography<Human> geography = (Geography)context.getProjection("Geography");
+				
 
-		geography.moveByDisplacement(this, RandomHelper.nextDoubleFromTo(-0.05, 0.05), 
-				RandomHelper.nextDoubleFromTo(-0.05, 0.05));
+		//die möglichen Startrouten sind entweder die Balkanroute oder die Nordroute
+		if (route == "BalkanRoute") {
+			location = BalkanRoute(locationCount);
+		}
+		if (route == "NorthRoute1") {
+			location = NorthRoute1(locationCount);
+		}
+		locationCount++;
+		geography.move(this, location);
 	}
 
 	public String getName() {
@@ -119,6 +182,10 @@ public class Human {
 	@Override
 	public String toString(){
 		return name;
+	}
+	
+	public Point getLocation() {
+		return location;
 	}
 
 }

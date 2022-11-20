@@ -21,16 +21,16 @@ import repast.simphony.visualization.gis3D.style.MarkStyle;
  * Style for GisAgents.  This demo style changes the appearance of the GisAgents
  *   based on their water value.
  * 
- * @author Eric Tatara
+ * @author XX
  *
  */
-public class GisAgentStyle implements MarkStyle<Human>{
+public class HumanStyle implements MarkStyle<Human>{
 	
 	private Offset labelOffset;
 	
 	private Map<String, WWTexture> textureMap;
 	
-	public GisAgentStyle(){
+	public HumanStyle(){
 		
 		/**
 		 * Use of a map to store textures significantly reduces CPU and memory use

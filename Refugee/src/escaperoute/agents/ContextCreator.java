@@ -24,20 +24,7 @@ import repast.simphony.space.gis.WritableGridCoverage2D;
 import repast.simphony.space.graph.Network;
 
 /**
- * ContextBuilder for the GIS demo.  In this model, mobile GisAgents move around
- * the Geography with a random motion and are represented by point locations.  
- * ZoneAgents are polygons that represent certain geographic areas.  WaterLine
- * agents represent water supply lines from Lake Michigan that supply the 
- * Chicago area.  When a ZoneAgent intersects a WaterLine, the ZoneAgent will 
- * have access to fresh drinking water.  GisAgents that are within a certain 
- * distance from the ZoneAgent boundary will also have access to water.  Agents
- * that are not in proximity to a Zone with a water supply will not have access
- * to water (they will be thirsty).  BufferZoneAgents are for visualization 
- * to illustrate the extend of the boundary around a ZoneAgent.  
- * 
- * GisAgents may be generated programmatically depending on the value for 
- * number of agents.  GisAgents, ZoneAgents, and WaterLine agents are also
- * loaded from ESRI shapefiles.
+ * XXX
  * 
  * @author XXX
  *
@@ -55,31 +42,37 @@ public class ContextCreator implements ContextBuilder {
 		NetworkBuilder<?> netBuilder = new NetworkBuilder<Object>("Network", context, true);
 		Network net = netBuilder.buildNetwork();
 				
+		// Startpunkt irgendwo im Meer - kann eigentlich weg
+		Point geom = fac.createPoint(new Coordinate(31, 33));
+
+		Parameters params = RunEnvironment.getInstance().getParameters();
 		
-		Human agent = new Human("Refugee");
-		context.add(agent);
+		int humanCount = (Integer) params.getValue("human_count");
+		for (int i = 0; i < humanCount; i++) {
+			Human agent = new Human("Refugee", geom);
+			context.add(agent);
+			geography.move(agent, geom);
+		}
+		
 
-		Point geom = fac.createPoint(new Coordinate(16, 44));
-		geography.move(agent, geom);
-
-		// envelope around northing Illinois
-		ReferencedEnvelope env = new ReferencedEnvelope(4, 28, 55, 33, DefaultGeographicCRS.WGS84);
+		// um Europa
+		ReferencedEnvelope env = new ReferencedEnvelope(30, -12, 36, 60, DefaultGeographicCRS.WGS84);
 
 		// Create a coverage to act as a heat map that becomes more intense with
 		//  the number of times the agent has visited a point.
-		int maxColorIndex = 10; //RepastCoverageFactory.MAX_BYTE_COLOR_INDEX;
-		Color[] whiteRedColorScale = new Color[maxColorIndex];
+//		int maxColorIndex = 10; //RepastCoverageFactory.MAX_BYTE_COLOR_INDEX;
+//		Color[] whiteRedColorScale = new Color[maxColorIndex];
 
 		// white to red color scale
-		for (int i=0; i<whiteRedColorScale.length; i++) {
-			int blueGreen = (255/maxColorIndex*(maxColorIndex-i));			
-			whiteRedColorScale[i] = new Color(255, blueGreen, blueGreen); 
-		}
+//		for (int i=0; i<whiteRedColorScale.length; i++) {
+//			int blueGreen = (255/maxColorIndex*(maxColorIndex-i));			
+//			whiteRedColorScale[i] = new Color(255, blueGreen, blueGreen); 
+//		}
 
 		// Color scale coverage with no-data
 		Category[] categories	= new Category[] {	
 				new Category("No data", new Color(0,0,0,0), 0),  // transparent
-				new Category("Level", whiteRedColorScale, NumberRange.create(1, maxColorIndex))
+//				new Category("Level", whiteRedColorScale, NumberRange.create(1, maxColorIndex))
 		};
 
 		WritableGridCoverage2D coverage2 = RepastCoverageFactory.createWritableByteIndexedCoverage(
