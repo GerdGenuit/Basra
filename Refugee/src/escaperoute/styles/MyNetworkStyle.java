@@ -26,28 +26,6 @@ public class MyNetworkStyle implements NetworkStyleGIS {
 
 	@Override
 	public Color getLineColor(RepastEdge edge) {
-		// Create a coverage to act as a heat map that becomes more intense with
-		//  the number of times the agent has visited a point.
-		int maxColorIndex = 10; //RepastCoverageFactory.MAX_BYTE_COLOR_INDEX;
-		Color[] whiteRedColorScale = new Color[maxColorIndex];
-
-		// white to red color scale
-		for (int i=0; i<whiteRedColorScale.length; i++) {
-			int blueGreen = (255/maxColorIndex*(maxColorIndex-i));			
-			whiteRedColorScale[i] = new Color(255, blueGreen, blueGreen); 
-		}
-
-		// Color scale coverage with no-data
-		Category[] categories	= new Category[] {	
-			new Category("No data", new Color(0,0,0,0), 0),  // transparent
-			new Category("Level", whiteRedColorScale, NumberRange.create(1, maxColorIndex))
-		};
-
-//		WritableGridCoverage2D coverage2 = RepastCoverageFactory.createWritableByteIndexedCoverage(
-//			"My data indexed", 20, 20, env, categories, null, 0);
-
-//		geography.addCoverage("My indexed coverage", coverage2);
-		
 		return Color.GREEN;
 	}
 
