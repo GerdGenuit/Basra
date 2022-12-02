@@ -1,94 +1,43 @@
 package escaperoute.styles;
 
 import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.image.BufferedImage;
-import java.util.HashMap;
-import java.util.Map;
 
-import escaperoute.agents.Route;
-import gov.nasa.worldwind.WorldWind;
-import gov.nasa.worldwind.render.BasicWWTexture;
-import gov.nasa.worldwind.render.Material;
-import gov.nasa.worldwind.render.Offset;
-import gov.nasa.worldwind.render.PatternFactory;
-import gov.nasa.worldwind.render.WWTexture;
-import repast.simphony.visualization.gis3D.PlaceMark;
-import repast.simphony.visualization.gis3D.style.MarkStyle;
+import org.geotools.coverage.Category;
+import org.geotools.util.NumberRange;
 
-public class RouteStyle implements MarkStyle<Route>{
+import gov.nasa.worldwind.render.SurfacePolyline;
+import repast.simphony.space.gis.RepastCoverageFactory;
+import repast.simphony.space.gis.WritableGridCoverage2D;
+import repast.simphony.space.graph.RepastEdge;
+import repast.simphony.visualization.gis3D.style.NetworkStyleGIS;
+
+/**
+ * Simple network style class example.
+ * 
+ * @author XX
+ *
+ */
+public class RouteStyle implements NetworkStyleGIS {
+	
+	public static Color color= Color.GREEN;
 
 	@Override
-	public WWTexture getTexture(Route object, WWTexture texture) {
-		// TODO Auto-generated method stub
-		return null;
+	public SurfacePolyline getSurfaceShape(RepastEdge edge, SurfacePolyline shape) {
+		return new SurfacePolyline();
 	}
 
 	@Override
-	public PlaceMark getPlaceMark(Route object, PlaceMark mark) {
-		// TODO Auto-generated method stub
-		return null;
+	public Color getLineColor(RepastEdge edge) {
+		return color;
 	}
 
 	@Override
-	public Offset getIconOffset(Route obj) {
-		// TODO Auto-generated method stub
-		return null;
+	public double getLineOpacity(RepastEdge edge) {
+		return 1.0;
 	}
 
 	@Override
-	public double getElevation(Route obj) {
-		// TODO Auto-generated method stub
-		return 0;
+	public double getLineWidth(RepastEdge edge) {
+		return 5.0;
 	}
-
-	@Override
-	public double getScale(Route obj) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public double getHeading(Route obj) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public String getLabel(Route obj) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Color getLabelColor(Route obj) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Font getLabelFont(Route obj) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Offset getLabelOffset(Route obj) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public double getLineWidth(Route obj) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public Material getLineMaterial(Route obj, Material lineMaterial) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

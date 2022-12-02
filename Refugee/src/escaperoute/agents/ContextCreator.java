@@ -54,6 +54,10 @@ public class ContextCreator implements ContextBuilder {
 			geography.move(agent, geom);
 		}
 		
+		for (int i = 0; i < 5; i++) {
+			Route agent = new Route(i);
+		}
+		
 
 		// um Europa
 		ReferencedEnvelope env = new ReferencedEnvelope(30, -12, 36, 60, DefaultGeographicCRS.WGS84);

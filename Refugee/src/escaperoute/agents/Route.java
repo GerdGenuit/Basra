@@ -3,7 +3,7 @@ package escaperoute.agents;
 import java.util.Random;
 import java.awt.Color;
 
-import escaperoute.styles.MyNetworkStyle;
+import escaperoute.styles.RouteStyle;
 
 import org.geotools.geometry.DirectPosition2D;
 import org.opengis.geometry.DirectPosition;
@@ -27,6 +27,45 @@ public class Route {
 	private Point currentLocation = null;
 	private GeometryFactory fac = new GeometryFactory();
 	public static int StartNumber = 0;
+	private static String name = null;
+	private static Color color = null;
+	
+	public Route() {
+		
+	}
+	
+	public Route(int i) {
+		if (i == 0) {
+			this.name = "BalkanRoute";
+			//helles rot
+			this.color = new Color(255,102,102);
+			RouteStyle.color = this.color;
+		}
+		if (i == 1) {
+			this.name = "SouthRoute";
+			//helles blau
+			this.color = new Color(51,204,255);
+			RouteStyle.color = this.color;
+		}
+		if (i == 2) {
+			this.name = "NorthRoute1";
+			//helles orange
+			this.color = new Color(255,153,0);
+			RouteStyle.color = this.color;
+		}
+		if (i == 3) {
+			this.name = "NorthRoute2";
+			//helles grün
+			this.color = new Color(0,204,0);
+			RouteStyle.color = this.color;
+		}
+		if (i == 4) {
+			this.name = "AlternativeRoute";
+			//helles gelb
+			this.color = new Color(255,255,153);
+			RouteStyle.color = this.color;
+		}
+	}
 	
 	public Point Start() {
 		// erzeugt eine zufällige Zahl zwischen 0 und 3, hiermit wird eine der vier Routen gewählt
@@ -58,9 +97,6 @@ public class Route {
 	}
 	
 	public Point BalkanRoute(int i) {
-		
-		//helles rot
-		MyNetworkStyle.color = new Color(255,102,102);
 		
 		//Athen
 		if (i == 0) {
@@ -157,9 +193,6 @@ public class Route {
 	
 	public Point SouthRoute(int i) {
 		
-		//helles blau
-		MyNetworkStyle.color = new Color(51,204,255);
-		
 		//Startpunkt Athen
 		if (i == 0) {
 			Point geom = fac.createPoint(new Coordinate(23.44, 37.59));
@@ -255,9 +288,6 @@ public class Route {
 	
 	public Point NorthRoute1(int i) {
 		
-		//helles orange
-		MyNetworkStyle.color = new Color(255,153,0);
-		
 		//Startpunkt Istanbul
 		if (i == 0) {
 			Point geom = fac.createPoint(new Coordinate(28.58, 41.10));
@@ -287,9 +317,6 @@ public class Route {
 	}
 	
 	public Point NorthRoute2(int i) {
-		
-		//helles grün
-		MyNetworkStyle.color = new Color(0,204,0);
 		
 		//Startpunkt Sofia
 		if (i == 0) {
@@ -360,9 +387,6 @@ public class Route {
 	}
 	
 	public Point AlternativeRoute(int i) {
-		
-		//helles gelb
-		MyNetworkStyle.color = new Color(255,255,153);
 		
 		//Startpunkt Athen
 		if (i == 0) {
