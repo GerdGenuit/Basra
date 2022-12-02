@@ -24,7 +24,7 @@
   <netStyles>
     <entry>
       <string>Network</string>
-      <string>escaperoute.styles.MyNetworkStyle</string>
+      <string>escaperoute.styles.RouteStyle</string>
     </entry>
   </netStyles>
   <editedNetStyles>
