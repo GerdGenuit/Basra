@@ -168,8 +168,11 @@ public class Human extends Route{
 	private void Walk(){
 		Context context = ContextUtils.getContext(this);
 		Geography<Human> geography = (Geography)context.getProjection("Geography");
-				
-		if (route == "BalkanRoute" && locationCount == 1) {
+			
+		if (reachedWaypoint == false) {
+			speed();
+		}
+		else if (route == "BalkanRoute" && locationCount == 1) {
 			Random random = new Random();
 			int WhichRoute = random.nextInt(3);
 			
@@ -185,7 +188,7 @@ public class Human extends Route{
 			}
 		}
 		
-		if (route == "NorthRoute1" && locationCount == 2) {
+		else if (route == "NorthRoute1" && locationCount == 2) {
 			Random random = new Random();
 			int WhichRoute = random.nextInt(2);
 			
@@ -200,12 +203,12 @@ public class Human extends Route{
 		}
 		
 		//die möglichen Startrouten sind entweder die Balkanroute oder die Nordroute
-		if (route == "BalkanRoute") {
+		else if (route == "BalkanRoute") {
 			oldLocation = location;
 			location = BalkanRoute(locationCount);
 		}
 		
-		if (route == "NorthRoute1") {
+		else if (route == "NorthRoute1") {
 			oldLocation = location;
 			location = NorthRoute1(locationCount);
 			if (locationCount == 4) {
@@ -215,12 +218,12 @@ public class Human extends Route{
 		}
 		
 		//Alternativrouten
-		if (route == "SouthRoute") {
+		else if (route == "SouthRoute") {
 			oldLocation = location;
 			location = SouthRoute(locationCount);
 		}
 		
-		if (route == "AlternativeRoute") {
+		else if (route == "AlternativeRoute") {
 			oldLocation = location;
 			location = AlternativeRoute(locationCount);
 			if (locationCount == 5) {
@@ -229,7 +232,7 @@ public class Human extends Route{
 			}
 		}
 		
-		if (route == "NorthRoute2") {
+		else if (route == "NorthRoute2") {
 			oldLocation = location;
 			location = NorthRoute2(locationCount);
 		}
