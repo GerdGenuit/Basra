@@ -10,8 +10,10 @@ import com.vividsolutions.jts.geom.GeometryFactory;
 import com.vividsolutions.jts.geom.Point;
 
 import repast.simphony.context.Context;
+import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.ScheduleParameters;
 import repast.simphony.engine.schedule.ScheduledMethod;
+import repast.simphony.parameter.Parameters;
 import repast.simphony.random.RandomHelper;
 import repast.simphony.space.gis.Geography;
 import repast.simphony.space.gis.WritableGridCoverage2D;
@@ -30,9 +32,11 @@ public class Human extends Route{
 	private int waypointCount = 1;
 	private Waypoint lastWayPoint = null;
 	private Point location = null;
+	private Point oldLocation = null;
 	private int locationCount = 0;
 	private String route;
 	private Boolean Chalkidiki = false;
+	private Boolean reachedWaypoint = true;
 
 	public Human(String name, Point geom) {
 		this.name = name;
@@ -81,7 +85,9 @@ public class Human extends Route{
 		}
 		Walk();
 		trackInCoverage();
-		dropWaypoint();
+		if (reachedWaypoint == true) {
+			dropWaypoint();
+		}
 		
 		// XX
 		try {
@@ -195,10 +201,12 @@ public class Human extends Route{
 		
 		//die möglichen Startrouten sind entweder die Balkanroute oder die Nordroute
 		if (route == "BalkanRoute") {
+			oldLocation = location;
 			location = BalkanRoute(locationCount);
 		}
 		
 		if (route == "NorthRoute1") {
+			oldLocation = location;
 			location = NorthRoute1(locationCount);
 			if (locationCount == 4) {
 				locationCount = 7;
@@ -208,10 +216,12 @@ public class Human extends Route{
 		
 		//Alternativrouten
 		if (route == "SouthRoute") {
+			oldLocation = location;
 			location = SouthRoute(locationCount);
 		}
 		
 		if (route == "AlternativeRoute") {
+			oldLocation = location;
 			location = AlternativeRoute(locationCount);
 			if (locationCount == 5) {
 				locationCount = 7;
@@ -220,11 +230,51 @@ public class Human extends Route{
 		}
 		
 		if (route == "NorthRoute2") {
+			oldLocation = location;
 			location = NorthRoute2(locationCount);
 		}
 		
 		locationCount++;
+		speed();
 		geography.move(this, location);
+	}
+	
+	public void speed () {
+		double x1 = location.getX();
+		double y1 = location.getY();
+		double x2 = oldLocation.getX();
+		double y2 = oldLocation.getY();
+		
+		double difference = Math.sqrt(111.3 * ((y2 - y1) * (y2 - y1)) + 71.5 * ((x2 - x1) * (x2 - x1)));
+		
+		Parameters params = RunEnvironment.getInstance().getParameters();
+		double humanSpeed = (Double) params.getValue("human_speed");
+		
+		if (difference > humanSpeed) {
+			
+			double differenceX = x1 - x2;
+			double differenceY = y1 - y2;
+			//Steigung der Geraden berechnen
+			//double m = (y1 - y2) / (x1 - x2);
+			// Winkel der Geraden berechnen
+			//double alpha = Math.atan(m);
+			//neuen Punkt berechnen
+			//double xNeuTest = x2 + (differenceX + (humanSpeed * Math.sin(alpha)));
+			//double yNeuTest = y2 + (differenceY + (humanSpeed * Math.cos(alpha)));
+			
+			double a = difference / humanSpeed;
+			double factor = 1 / a;
+			
+			double xNeu = x2 + (differenceX * factor);
+			double yNeu = y2 + (differenceY * factor);
+			
+			//double control = Math.sqrt(111.3 * y2 * yNeu + 71.5 * x2 * xNeu);
+			
+			oldLocation = fac.createPoint(new Coordinate(xNeu, yNeu));
+			
+			reachedWaypoint = false;
+		}
+		else reachedWaypoint = true;
 	}
 
 	public String getName() {

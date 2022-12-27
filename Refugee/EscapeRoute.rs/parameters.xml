@@ -13,5 +13,11 @@
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
 		/>
+			<parameter name="human_speed" displayName="Human Speed" type="double" 
+						defaultValue="15" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
+									
+		/>
 		</parameters>
 
