@@ -16,6 +16,8 @@ import repast.simphony.context.space.gis.GeographyFactoryFinder;
 import repast.simphony.context.space.graph.NetworkBuilder;
 import repast.simphony.dataLoader.ContextBuilder;
 import repast.simphony.engine.environment.RunEnvironment;
+import repast.simphony.engine.schedule.ScheduleParameters;
+import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.parameter.Parameters;
 import repast.simphony.space.gis.Geography;
 import repast.simphony.space.gis.GeographyParameters;
@@ -30,6 +32,8 @@ import repast.simphony.space.graph.Network;
  *
  */
 public class ContextCreator implements ContextBuilder {
+	
+	public static Route [] agents = null;
 		
 	public Context build(Context context) {
 	
@@ -54,8 +58,10 @@ public class ContextCreator implements ContextBuilder {
 			geography.move(agent, geom);
 		}
 		
+		agents = new Route[5];
 		for (int i = 0; i < 5; i++) {
-			Route agent = new Route(i);
+			Route route = new Route(i);
+			agents [i]= (Route) route;
 		}
 		
 

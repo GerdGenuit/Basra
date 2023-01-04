@@ -4,6 +4,7 @@ import java.util.Random;
 import java.awt.Color;
 
 import escaperoute.styles.RouteStyle;
+import repast.simphony.space.graph.RepastEdge;
 
 import org.geotools.geometry.DirectPosition2D;
 import org.opengis.geometry.DirectPosition;
@@ -19,6 +20,7 @@ import repast.simphony.random.RandomHelper;
 import repast.simphony.space.gis.Geography;
 import repast.simphony.space.gis.WritableGridCoverage2D;
 import repast.simphony.space.graph.Network;
+import repast.simphony.space.graph.RepastEdge;
 import repast.simphony.util.ContextUtils;
 
 
@@ -27,8 +29,8 @@ public class Route {
 	private Point currentLocation = null;
 	private GeometryFactory fac = new GeometryFactory();
 	public static int StartNumber = 0;
-	private static String name = null;
-	private static Color color = null;
+	public static String name = null;
+	private Color color = null;
 	
 	public Route() {
 		
@@ -36,9 +38,11 @@ public class Route {
 	
 	public Route(int i) {
 		if (i == 0) {
-			this.name = "BalkanRoute";
+			String nameRoute = "BalkanRoute";
+			this.name= nameRoute;
 			//helles rot
-			this.color = new Color(255,102,102);
+			Color colorRoute = new Color(255,102,102);
+			this.color = colorRoute;
 			RouteStyle.color = this.color;
 		}
 		if (i == 1) {

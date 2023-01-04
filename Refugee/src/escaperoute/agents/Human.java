@@ -171,6 +171,7 @@ public class Human extends Route{
 			
 		if (reachedWaypoint == false) {
 			speed();
+			geography.move(this, oldLocation);
 		}
 		else if (route == "BalkanRoute" && locationCount == 1) {
 			Random random = new Random();
@@ -239,7 +240,12 @@ public class Human extends Route{
 		
 		locationCount++;
 		speed();
-		geography.move(this, location);
+		if (reachedWaypoint == false) {
+			geography.move(this, oldLocation);
+		}
+		else if (reachedWaypoint == true) {
+			geography.move(this, location);
+		}
 	}
 	
 	public void speed () {
