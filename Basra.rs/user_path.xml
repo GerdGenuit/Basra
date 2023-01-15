@@ -1,4 +1,4 @@
-<model name="EscapeRoute" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://repast.org/scenario/user_path">
+<model name="Basra" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://repast.org/scenario/user_path">
 	<classpath>
 		<agents path="../bin" filter="escaperoute.agents.*"/>
 		<entry path="../bin" annotations="false"/>
