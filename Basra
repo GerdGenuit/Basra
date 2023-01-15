@@ -1,0 +1,858 @@
+<root>
+  <converter__count>0</converter__count>
+  <root__obj class="repast.simphony.context.DefaultContext">
+    <id class="java.lang.String">Basra</id>
+    <type__id class="java.lang.String">Basra</type__id>
+    <size>88</size>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>12</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>16</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>3</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>6</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>12</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>5</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>14</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>5</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>15</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>10</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>8</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>6</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>2</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>14</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>2</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>4</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>1</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>2</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>1</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>4</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>9</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>10</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>5</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>8</id>
+    </agent>
+    <agent class="escaperoute.agents.Human">
+      <currentLocation>
+        <envelope>
+          <minx>13.24</minx>
+          <maxx>13.24</maxx>
+          <miny>52.31</miny>
+          <maxy>52.31</maxy>
+        </envelope>
+        <factory>
+          <precisionModel>
+            <modelType>
+              <name>FLOATING</name>
+            </modelType>
+            <scale>0.0</scale>
+          </precisionModel>
+          <coordinateSequenceFactory class="com.vividsolutions.jts.geom.impl.CoordinateArraySequenceFactory"/>
+          <SRID>0</SRID>
+        </factory>
+        <SRID>0</SRID>
+        <coordinates class="com.vividsolutions.jts.geom.impl.CoordinateArraySequence">
+          <dimension>3</dimension>
+          <coordinates>
+            <com.vividsolutions.jts.geom.Coordinate>
+              <x>13.24</x>
+              <y>52.31</y>
+              <z>NaN</z>
+            </com.vividsolutions.jts.geom.Coordinate>
+          </coordinates>
+        </coordinates>
+      </currentLocation>
+      <fac defined-in="escaperoute.agents.Route" reference="/root/root__obj/agent[25]/currentLocation/factory"/>
+      <name>Refugee</name>
+      <waypointCount>17</waypointCount>
+      <lastWayPoint>
+        <id>16</id>
+      </lastWayPoint>
+      <location reference="/root/root__obj/agent[25]/currentLocation"/>
+      <oldLocation reference="/root/root__obj/agent[25]/currentLocation"/>
+      <locationCount>22</locationCount>
+      <route>BalkanRoute</route>
+      <Chalkidiki>false</Chalkidiki>
+      <reachedWaypoint>true</reachedWaypoint>
+      <fac>
+        <precisionModel>
+          <modelType reference="/root/root__obj/agent[25]/currentLocation/factory/precisionModel/modelType"/>
+          <scale>0.0</scale>
+        </precisionModel>
+        <coordinateSequenceFactory class="com.vividsolutions.jts.geom.impl.CoordinateArraySequenceFactory" reference="/root/root__obj/agent[25]/currentLocation/factory/coordinateSequenceFactory"/>
+        <SRID>0</SRID>
+      </fac>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>7</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>10</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>4</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>9</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>7</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>4</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>4</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>14</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>13</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>7</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>8</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>15</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>12</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>13</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>6</id>
+    </agent>
+    <agent class="escaperoute.agents.Human">
+      <currentLocation>
+        <envelope>
+          <minx>13.24</minx>
+          <maxx>13.24</maxx>
+          <miny>52.31</miny>
+          <maxy>52.31</maxy>
+        </envelope>
+        <factory>
+          <precisionModel>
+            <modelType reference="/root/root__obj/agent[25]/currentLocation/factory/precisionModel/modelType"/>
+            <scale>0.0</scale>
+          </precisionModel>
+          <coordinateSequenceFactory class="com.vividsolutions.jts.geom.impl.CoordinateArraySequenceFactory" reference="/root/root__obj/agent[25]/currentLocation/factory/coordinateSequenceFactory"/>
+          <SRID>0</SRID>
+        </factory>
+        <SRID>0</SRID>
+        <coordinates class="com.vividsolutions.jts.geom.impl.CoordinateArraySequence">
+          <dimension>3</dimension>
+          <coordinates>
+            <com.vividsolutions.jts.geom.Coordinate>
+              <x>13.24</x>
+              <y>52.31</y>
+              <z>NaN</z>
+            </com.vividsolutions.jts.geom.Coordinate>
+          </coordinates>
+        </coordinates>
+      </currentLocation>
+      <fac defined-in="escaperoute.agents.Route" reference="/root/root__obj/agent[41]/currentLocation/factory"/>
+      <name>Refugee</name>
+      <waypointCount>17</waypointCount>
+      <lastWayPoint>
+        <id>16</id>
+      </lastWayPoint>
+      <location reference="/root/root__obj/agent[41]/currentLocation"/>
+      <oldLocation reference="/root/root__obj/agent[41]/currentLocation"/>
+      <locationCount>22</locationCount>
+      <route>BalkanRoute</route>
+      <Chalkidiki>false</Chalkidiki>
+      <reachedWaypoint>true</reachedWaypoint>
+      <fac>
+        <precisionModel>
+          <modelType reference="/root/root__obj/agent[25]/currentLocation/factory/precisionModel/modelType"/>
+          <scale>0.0</scale>
+        </precisionModel>
+        <coordinateSequenceFactory class="com.vividsolutions.jts.geom.impl.CoordinateArraySequenceFactory" reference="/root/root__obj/agent[25]/currentLocation/factory/coordinateSequenceFactory"/>
+        <SRID>0</SRID>
+      </fac>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>6</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>3</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>11</id>
+    </agent>
+    <agent class="escaperoute.agents.Human">
+      <currentLocation>
+        <envelope>
+          <minx>13.24</minx>
+          <maxx>13.24</maxx>
+          <miny>52.31</miny>
+          <maxy>52.31</maxy>
+        </envelope>
+        <factory>
+          <precisionModel>
+            <modelType reference="/root/root__obj/agent[25]/currentLocation/factory/precisionModel/modelType"/>
+            <scale>0.0</scale>
+          </precisionModel>
+          <coordinateSequenceFactory class="com.vividsolutions.jts.geom.impl.CoordinateArraySequenceFactory" reference="/root/root__obj/agent[25]/currentLocation/factory/coordinateSequenceFactory"/>
+          <SRID>0</SRID>
+        </factory>
+        <SRID>0</SRID>
+        <coordinates class="com.vividsolutions.jts.geom.impl.CoordinateArraySequence">
+          <dimension>3</dimension>
+          <coordinates>
+            <com.vividsolutions.jts.geom.Coordinate>
+              <x>13.24</x>
+              <y>52.31</y>
+              <z>NaN</z>
+            </com.vividsolutions.jts.geom.Coordinate>
+          </coordinates>
+        </coordinates>
+      </currentLocation>
+      <fac defined-in="escaperoute.agents.Route" reference="/root/root__obj/agent[45]/currentLocation/factory"/>
+      <name>Refugee</name>
+      <waypointCount>20</waypointCount>
+      <lastWayPoint>
+        <id>19</id>
+      </lastWayPoint>
+      <location reference="/root/root__obj/agent[45]/currentLocation"/>
+      <oldLocation reference="/root/root__obj/agent[45]/currentLocation"/>
+      <locationCount>25</locationCount>
+      <route>BalkanRoute</route>
+      <Chalkidiki>false</Chalkidiki>
+      <reachedWaypoint>true</reachedWaypoint>
+      <fac>
+        <precisionModel>
+          <modelType reference="/root/root__obj/agent[25]/currentLocation/factory/precisionModel/modelType"/>
+          <scale>0.0</scale>
+        </precisionModel>
+        <coordinateSequenceFactory class="com.vividsolutions.jts.geom.impl.CoordinateArraySequenceFactory" reference="/root/root__obj/agent[25]/currentLocation/factory/coordinateSequenceFactory"/>
+        <SRID>0</SRID>
+      </fac>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>8</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>5</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>11</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>15</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>18</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>14</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>11</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>2</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>5</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>6</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>9</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>3</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>9</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>15</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>10</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>14</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>12</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>16</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>16</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>10</id>
+    </agent>
+    <agent class="escaperoute.agents.Human">
+      <currentLocation>
+        <envelope>
+          <minx>13.24</minx>
+          <maxx>13.24</maxx>
+          <miny>52.31</miny>
+          <maxy>52.31</maxy>
+        </envelope>
+        <factory>
+          <precisionModel>
+            <modelType reference="/root/root__obj/agent[25]/currentLocation/factory/precisionModel/modelType"/>
+            <scale>0.0</scale>
+          </precisionModel>
+          <coordinateSequenceFactory class="com.vividsolutions.jts.geom.impl.CoordinateArraySequenceFactory" reference="/root/root__obj/agent[25]/currentLocation/factory/coordinateSequenceFactory"/>
+          <SRID>0</SRID>
+        </factory>
+        <SRID>0</SRID>
+        <coordinates class="com.vividsolutions.jts.geom.impl.CoordinateArraySequence">
+          <dimension>3</dimension>
+          <coordinates>
+            <com.vividsolutions.jts.geom.Coordinate>
+              <x>13.24</x>
+              <y>52.31</y>
+              <z>NaN</z>
+            </com.vividsolutions.jts.geom.Coordinate>
+          </coordinates>
+        </coordinates>
+      </currentLocation>
+      <fac defined-in="escaperoute.agents.Route" reference="/root/root__obj/agent[66]/currentLocation/factory"/>
+      <name>Refugee</name>
+      <waypointCount>17</waypointCount>
+      <lastWayPoint reference="/root/root__obj/agent[64]"/>
+      <location reference="/root/root__obj/agent[66]/currentLocation"/>
+      <oldLocation reference="/root/root__obj/agent[66]/currentLocation"/>
+      <locationCount>22</locationCount>
+      <route>BalkanRoute</route>
+      <Chalkidiki>false</Chalkidiki>
+      <reachedWaypoint>true</reachedWaypoint>
+      <fac>
+        <precisionModel>
+          <modelType reference="/root/root__obj/agent[25]/currentLocation/factory/precisionModel/modelType"/>
+          <scale>0.0</scale>
+        </precisionModel>
+        <coordinateSequenceFactory class="com.vividsolutions.jts.geom.impl.CoordinateArraySequenceFactory" reference="/root/root__obj/agent[25]/currentLocation/factory/coordinateSequenceFactory"/>
+        <SRID>0</SRID>
+      </fac>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>1</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>7</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>9</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[45]/lastWayPoint"/>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>1</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>17</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>1</id>
+    </agent>
+    <agent class="escaperoute.agents.Human">
+      <currentLocation>
+        <envelope>
+          <minx>13.24</minx>
+          <maxx>13.24</maxx>
+          <miny>52.31</miny>
+          <maxy>52.31</maxy>
+        </envelope>
+        <factory>
+          <precisionModel>
+            <modelType reference="/root/root__obj/agent[25]/currentLocation/factory/precisionModel/modelType"/>
+            <scale>0.0</scale>
+          </precisionModel>
+          <coordinateSequenceFactory class="com.vividsolutions.jts.geom.impl.CoordinateArraySequenceFactory" reference="/root/root__obj/agent[25]/currentLocation/factory/coordinateSequenceFactory"/>
+          <SRID>0</SRID>
+        </factory>
+        <SRID>0</SRID>
+        <coordinates class="com.vividsolutions.jts.geom.impl.CoordinateArraySequence">
+          <dimension>3</dimension>
+          <coordinates>
+            <com.vividsolutions.jts.geom.Coordinate>
+              <x>13.24</x>
+              <y>52.31</y>
+              <z>NaN</z>
+            </com.vividsolutions.jts.geom.Coordinate>
+          </coordinates>
+        </coordinates>
+      </currentLocation>
+      <fac defined-in="escaperoute.agents.Route" reference="/root/root__obj/agent[74]/currentLocation/factory"/>
+      <name>Refugee</name>
+      <waypointCount>17</waypointCount>
+      <lastWayPoint reference="/root/root__obj/agent[2]"/>
+      <location reference="/root/root__obj/agent[74]/currentLocation"/>
+      <oldLocation reference="/root/root__obj/agent[74]/currentLocation"/>
+      <locationCount>22</locationCount>
+      <route>BalkanRoute</route>
+      <Chalkidiki>false</Chalkidiki>
+      <reachedWaypoint>true</reachedWaypoint>
+      <fac>
+        <precisionModel>
+          <modelType reference="/root/root__obj/agent[25]/currentLocation/factory/precisionModel/modelType"/>
+          <scale>0.0</scale>
+        </precisionModel>
+        <coordinateSequenceFactory class="com.vividsolutions.jts.geom.impl.CoordinateArraySequenceFactory" reference="/root/root__obj/agent[25]/currentLocation/factory/coordinateSequenceFactory"/>
+        <SRID>0</SRID>
+      </fac>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>7</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>15</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[41]/lastWayPoint"/>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>13</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>3</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>8</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>2</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>13</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>12</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>3</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>13</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>11</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint">
+      <id>11</id>
+    </agent>
+    <agent class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[25]/lastWayPoint"/>
+    <sub__count>0</sub__count>
+    <proj__count>2</proj__count>
+    <projection class="repast.simphony.context.space.gis.ContextGeography">
+      <name>Geography</name>
+      <adder>repast.simphony.space.gis.SimpleAdder</adder>
+      <crs>GEOGCS[&quot;WGS84(DD)&quot;, &#xd;
+  DATUM[&quot;WGS84&quot;, &#xd;
+    SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]], &#xd;
+  PRIMEM[&quot;Greenwich&quot;, 0.0], &#xd;
+  UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+  AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+  AXIS[&quot;Geodetic latitude&quot;, NORTH]]</crs>
+      <geom__count>88</geom__count>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent"/>
+        <second class="string">POINT (14.31 46.63)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[2]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[3]"/>
+        <second class="string">POINT (21.48 40.19)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[4]"/>
+        <second class="string">POINT (21.87 42.69)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[5]"/>
+        <second class="string">POINT (14.31 46.63)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[6]"/>
+        <second class="string">POINT (21.7 42.24)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[7]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[8]"/>
+        <second class="string">POINT (21.7 42.24)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[9]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[10]"/>
+        <second class="string">POINT (15.28 45.58)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[11]"/>
+        <second class="string">POINT (20.28 44.49)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[12]"/>
+        <second class="string">POINT (21.87 42.69)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[13]"/>
+        <second class="string">POINT (23.42 40.13)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[14]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[15]"/>
+        <second class="string">POINT (23.44 37.59)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[16]"/>
+        <second class="string">POINT (22.55 41.13)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[17]"/>
+        <second class="string">POINT (27.7 36.49)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[18]"/>
+        <second class="string">POINT (23.44 37.59)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[19]"/>
+        <second class="string">POINT (26.58 37.45)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[20]"/>
+        <second class="string">POINT (22.55 41.13)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[21]"/>
+        <second class="string">POINT (15.58 45.48)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[22]"/>
+        <second class="string">POINT (15.28 45.58)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[23]"/>
+        <second class="string">POINT (21.7 42.24)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[24]"/>
+        <second class="string">POINT (20.28 44.49)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Human" reference="/root/root__obj/agent[25]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[26]"/>
+        <second class="string">POINT (21.54 43.19)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[27]"/>
+        <second class="string">POINT (15.28 45.58)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[28]"/>
+        <second class="string">POINT (22.55 41.13)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[29]"/>
+        <second class="string">POINT (15.58 45.48)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[30]"/>
+        <second class="string">POINT (21.54 43.19)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[31]"/>
+        <second class="string">POINT (22.55 41.13)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[32]"/>
+        <second class="string">POINT (22.55 41.13)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[33]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[34]"/>
+        <second class="string">POINT (12.28 47.16)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[35]"/>
+        <second class="string">POINT (21.54 43.19)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[36]"/>
+        <second class="string">POINT (20.28 44.49)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[37]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[38]"/>
+        <second class="string">POINT (14.31 46.63)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[39]"/>
+        <second class="string">POINT (12.28 47.16)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[40]"/>
+        <second class="string">POINT (21.87 42.69)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Human" reference="/root/root__obj/agent[41]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[42]"/>
+        <second class="string">POINT (21.87 42.69)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[43]"/>
+        <second class="string">POINT (21.48 40.19)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[44]"/>
+        <second class="string">POINT (15.21 46.65)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Human" reference="/root/root__obj/agent[45]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[46]"/>
+        <second class="string">POINT (20.28 44.49)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[47]"/>
+        <second class="string">POINT (21.7 42.24)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[48]"/>
+        <second class="string">POINT (15.21 46.65)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[49]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[50]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[51]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[52]"/>
+        <second class="string">POINT (15.21 46.65)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[53]"/>
+        <second class="string">POINT (23.44 37.59)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[54]"/>
+        <second class="string">POINT (21.7 42.24)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[55]"/>
+        <second class="string">POINT (21.87 42.69)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[56]"/>
+        <second class="string">POINT (15.58 45.48)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[57]"/>
+        <second class="string">POINT (21.48 40.19)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[58]"/>
+        <second class="string">POINT (15.58 45.48)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[59]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[60]"/>
+        <second class="string">POINT (15.28 45.58)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[61]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[62]"/>
+        <second class="string">POINT (14.31 46.63)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[63]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[64]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[65]"/>
+        <second class="string">POINT (15.28 45.58)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Human" reference="/root/root__obj/agent[66]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[67]"/>
+        <second class="string">POINT (26.58 37.45)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[68]"/>
+        <second class="string">POINT (21.54 43.19)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[69]"/>
+        <second class="string">POINT (15.58 45.48)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[45]/lastWayPoint"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[71]"/>
+        <second class="string">POINT (26.1 38.24)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[72]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[73]"/>
+        <second class="string">POINT (27.7 36.49)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Human" reference="/root/root__obj/agent[74]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[75]"/>
+        <second class="string">POINT (21.54 43.19)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[76]"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[41]/lastWayPoint"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[78]"/>
+        <second class="string">POINT (12.28 47.16)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[79]"/>
+        <second class="string">POINT (21.48 40.19)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[80]"/>
+        <second class="string">POINT (20.28 44.49)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[81]"/>
+        <second class="string">POINT (23.44 37.59)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[82]"/>
+        <second class="string">POINT (12.28 47.16)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[83]"/>
+        <second class="string">POINT (14.31 46.63)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[84]"/>
+        <second class="string">POINT (22.58 40.39)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[85]"/>
+        <second class="string">POINT (12.28 47.16)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[86]"/>
+        <second class="string">POINT (15.21 46.65)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[87]"/>
+        <second class="string">POINT (15.21 46.65)</second>
+      </geom__entry>
+      <geom__entry class="repast.simphony.util.collections.Pair">
+        <first class="escaperoute.agents.Waypoint" reference="/root/root__obj/agent[25]/lastWayPoint"/>
+        <second class="string">POINT (13.24 52.31)</second>
+      </geom__entry>
+      <coverage__count>1</coverage__count>
